@@ -1,0 +1,7 @@
+{
+  "name": "SmartPlanter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
