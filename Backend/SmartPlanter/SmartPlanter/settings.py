@@ -25,9 +25,28 @@ SECRET_KEY = 'django-insecure-c8&9h#8yd)wtskf%k1!=cbndaon*mu+a-e+*63e619^(i4s-$#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.100.15']
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8100", 
+    "http://localhost:8000",  # Nuestro dominio de angular
+    "http://127.0.0.1:8000",  # Agregado para permitir acceso desde la IP
+]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8100', 'http://127.0.0.1:8000']
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://\w+\.ngrok\.io$",
+]
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,9 +57,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'api',
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # Asegúrate de que esto esté antes de otros middleware
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +73,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'SmartPlanter.urls'
 
 TEMPLATES = [
@@ -80,14 +104,13 @@ DATABASES = {
         'NAME': 'SmartPlanter',
         'USER': 'admin',
         'PASSWORD': 'admin1234',
-        'HOST': 'database-1.cxx0nxw6mals.us-east-2.rds.amazonaws.com',
+        'HOST': 'smartplanter.cxx0nxw6mals.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
