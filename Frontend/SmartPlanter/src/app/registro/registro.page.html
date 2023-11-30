@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="FormularioRegistro">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Gmail</ion-label>
+          <ion-input formControlName="gmail"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contrasenia</ion-label>
+          <ion-input formControlName="contrasenia"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirmar Contrasenia</ion-label>
+          <ion-input formControlName="concontra"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="success"[routerLink]="['/sensor']">Crear Cuenta</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

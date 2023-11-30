@@ -5,7 +5,7 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": ["D:/Smart-Planter/Frontend/SmartPlanter/tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
