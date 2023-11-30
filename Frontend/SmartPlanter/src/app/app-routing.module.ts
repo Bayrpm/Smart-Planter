@@ -13,6 +13,14 @@ const routes: Routes = [
   },  {
     path: 'sensor',
     loadChildren: () => import('./sensor/sensor.module').then( m => m.SensorPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   }
 
 ];
