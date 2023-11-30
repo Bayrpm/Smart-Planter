@@ -23,3 +23,7 @@ class ListaSensorData(generics.ListCreateAPIView):
         # Si no existe un registro, crear uno nuevo
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class ListarDatosSensorData(generics.ListAPIView):
+    serializer_class = SensorDataSerializer
+    queryset = SensorData.objects.all()
