@@ -1,0 +1,76 @@
+/* nombre-componente.component.scss */
+
+ion-content {
+    --background: url('https://fotografias-compromiso.atresmedia.com/clipping/cmsimages02/2017/09/01/3DC5C824-06A7-45FD-A76B-77B48EF6D241/58.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%; /* Ajusta la altura al 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ion-button {
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+    align-items: center;
+    color: white;
+    background-color: chartreuse;
+    border-color: chartreuse;
+  }
+
+
+  ion-header{
+    color: #000;
+    background-color: greenyellow;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  
+    height: 170px;
+    width: 400px;
+  
+    margin: 0 auto;
+  }
+  
+  b {
+    width: 100%;
+  }
+  
+  .ripple-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: relative;
+    overflow: hidden;
+  
+    border: 1px solid #1cce52;
+  
+    user-select: none;
+  
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+
+    margin: 20px;
+  }
+  
+  .custom-parent {
+    color: #de1e7e;
+  }
+  
+  .custom-ripple {
+    color: #501ace;
+  }
+
+
+  h1{
+    text-align: center;
+  }
+  
