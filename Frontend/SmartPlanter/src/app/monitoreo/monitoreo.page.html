@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Informacion de monitoreo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="datosSensorHumedadAmbiente && datosSensorHumedadAmbiente.length > 0">
+    <ion-card-header>
+      Sensor ambiente
+    </ion-card-header>
+    <ion-card-content>
+      <p>Temperatura: {{ datosSensorHumedadAmbiente[0]?.temperature }}</p>
+      <p>Humedad: {{ datosSensorHumedadAmbiente[0]?.humidity }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Sensor Humedad </ion-card-header>
+    <ion-card-content> Contenido del sensor de humedad </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Sensores estanque </ion-card-header>
+    <ion-card-content> Contenido de los sensores de estanque </ion-card-content>
+  </ion-card>
+</ion-content>

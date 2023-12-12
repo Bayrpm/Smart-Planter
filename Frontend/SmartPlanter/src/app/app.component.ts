@@ -12,6 +12,6 @@ export class AppComponent {
     { title: 'sensor', url: 'sensor', icon: 'archive' },
     { title: 'asistencia', url: 'asistencia', icon: 'trash' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
   constructor() {}
 }
