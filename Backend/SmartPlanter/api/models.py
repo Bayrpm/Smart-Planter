@@ -11,7 +11,7 @@ class SensorData(models.Model):
 
 
 class SensorSuelo(models.Model):
-    humidity_ground = models.FloatField()
+    humidity_ground = models.TextField()
 
     def __str__(self):
         return f'Humidity: {self.humidity}'
