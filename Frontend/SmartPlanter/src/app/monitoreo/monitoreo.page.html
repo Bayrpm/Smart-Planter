@@ -10,18 +10,23 @@
       Sensor ambiente
     </ion-card-header>
     <ion-card-content>
-      <p>Temperatura: {{ datosSensorHumedadAmbiente[0]?.temperature }}</p>
-      <p>Humedad: {{ datosSensorHumedadAmbiente[0]?.humidity }}</p>
+      <p>Temperatura: {{ datosSensorHumedadAmbiente[0]?.temperature }}°c</p>
+      <p>Humedad: {{ datosSensorHumedadAmbiente[0]?.humidity }}%</p>
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card *ngIf="datosSensorSuelo && datosSensorSuelo.length > 0">
     <ion-card-header> Sensor Humedad </ion-card-header>
-    <ion-card-content> Contenido del sensor de humedad </ion-card-content>
+    <ion-card-content>
+      <p>Humedad de la tierra: {{ datosSensorSuelo[0]?.humidity_ground }}%</p>
+    </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-header> Sensores estanque </ion-card-header>
     <ion-card-content> Contenido de los sensores de estanque </ion-card-content>
   </ion-card>
+
+  <ion-button (click)="actualizarDatos()">Actualizar</ion-button>
+  
 </ion-content>
