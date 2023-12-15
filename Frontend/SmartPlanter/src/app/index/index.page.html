@@ -1,0 +1,42 @@
+<ion-header style="color: black; background-color: green;">
+  <ion-toolbar>
+    <ion-title>Menu Principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+
+  
+    <ion-item>
+      <div class="ion-activatable ripple-parent" [routerLink]="['/historial']">
+        Historial
+        <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+      </div>
+    </ion-item>
+  
+    <ion-item>
+      <div class="ion-activatable ripple-parent" [routerLink]="['/sensor']">
+        Ajustes
+        <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="ion-activatable ripple-parent" [routerLink]="['/asistencia']">
+        Asistencia
+        <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="ion-activatable ripple-parent" [routerLink]="['/login']">
+        Cerrar Sesion
+        <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+      </div>
+    </ion-item>
+  
+  </ion-list>
+  
+</ion-content>
+

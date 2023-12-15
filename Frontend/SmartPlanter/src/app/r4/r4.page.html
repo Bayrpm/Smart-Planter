@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ayuda de un profesional</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h3 style="text-align: center;">Asistencia Virtual</h3>
+<form action="">
+<ion-item>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Correo</ion-label>
+  <ion-input type="Gmail"></ion-input>
+</ion-item>
+
+
+<ion-item>
+  <ion-label position="floating">Describa su problema</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+
+</form>
+
+<ion-list>
+
+
+  <ion-item>
+    <div class="ion-activatable ripple-parent" [routerLink]="['/r4']">
+      Guardar
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+  </ion-item>
+</ion-list>
+</ion-content>
