@@ -48,3 +48,6 @@ class ListarDatosSensorData(generics.ListAPIView):
     serializer_class = SensorDataSerializer
     queryset = SensorData.objects.all()
 
+class ListarDatosSensorSuelo(generics.ListAPIView):
+    serializer_class = SensorSueloSerializer
+    queryset = SensorSuelo.objects.all()

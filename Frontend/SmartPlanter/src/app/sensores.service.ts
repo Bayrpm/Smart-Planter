@@ -16,4 +16,8 @@ export class SensoresService {
     return this.http.get(`${this.apiUrl}/listar-datos-sensor-data/`);
   }
 
+  getSensorSuelo(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/listar-datos-sensor-suelo/`);
+  }
+
 }

@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Login', url: 'login', icon: 'mail' },
     { title: 'Registro', url: 'registro', icon: 'paper-plane' },
     { title: 'historial', url: 'historial', icon: 'heart' },
-    { title: 'sensor', url: 'sensor', icon: 'archive' },
+    { title: 'monitoreo', url: 'monitoreo', icon: 'archive' },
     { title: 'asistencia', url: 'asistencia', icon: 'trash' },
   ];
 
